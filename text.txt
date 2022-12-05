@@ -1,0 +1,109 @@
+// [creat table] in DB
+ $ php artisan make:migration create_authors_table
+
+
+
+// [create columns] & excute
+   $ php artisan migrate
+
+
+
+// [Edit on columns] then excute
+    $ php artisan migrate
+
+
+// create model ,controller & migrate at the same command [model+controller+migrate]
+  $ php artisan make:model Book -cm
+
+
+
+
+
+// [Creat Model] authors => model => Author
+     $ php artisan make:model Author
+
+
+
+
+// Creat Controller
+$ php artisan make:controller AuthorController
+
+
+
+// Query in laravel  ORM => object relational mapper
+   $ Authors::select('name','bio')
+    ->where('id','>',2)
+    ->orderBy('id','DESC')
+    ->take(2)
+    ->get() ;
+
+
+
+
+
+// GET  & POST
+get // return view
+Post // return direct
+
+
+
+
+
+ //  to delete last migrate
+  $  php artisan migrate:rollback
+
+
+
+
+
+
+
+
+// one  to   one
+hasOne()
+belongsTo()
+users  phone_number  ;
+       user_id
+       user hasOne phone_number
+       phone_number belongsTo user
+
+
+
+
+
+// one to many
+
+author hasMany books ;
+book belongsTo  Author
+
+
+
+
+
+
+// many to many
+
+
+
+
+
+// Middlware
+ $ php artisan make:middleware userAuth
+
+
+login or not
+role or not
+
+route ?
+
+
+
+
+
+I am learned
+
+//=>  get all data
+// => get  3 last data
+//=> get paginate
+//=>  show by id
+//=> search
